@@ -26,7 +26,7 @@ namespace LoginFormTest
         {
             //2. create new SqlConnection. 
             /*the @"" thing is a Connection String.*/
-            SqlConnection sqlcon = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Nix\Documents\Visual Studio 2015\Projects\LoginFormTest\LoginFormTest\DB\loginDB.mdf; Integrated Security = True; Connect Timeout = 30");
+            SqlConnection sqlcon = new SqlConnection(Constants.LoginDbConnectionString);
             //3.Make a query. The query is what we're going to ask the DB to do, pretty much.
 
             //Encryption time!!
@@ -34,14 +34,14 @@ namespace LoginFormTest
 
             string query = "Select * from [Table] Where username= '" + textBox1.Text + "'";
             //4. Create an object which will send the query through our connection to the sql server
-            SqlDataAdapter sda = new SqlDataAdapter(query,sqlcon);
+            SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
             //5. Create a dataTable in which we'll put the login information that matches
             DataTable dtbl = new DataTable();
             //6.Fill the table with whichever entry in the DB fits the criteria of:having the username put in the textBox1.Text
             //and password from textBox2.Text
             sda.Fill(dtbl);
             //7.If there is 1 element, check for password matching :)
-            if(dtbl.Rows.Count == 1)
+            if (dtbl.Rows.Count == 1)
             {
                 //get the saved string
                 string savedPasswordHash = dtbl.Rows[0][1].ToString();
@@ -88,7 +88,7 @@ namespace LoginFormTest
         {
 
             //Same drift, connect to the DB
-            SqlConnection sqlcon = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Nix\Documents\Visual Studio 2015\Projects\LoginFormTest\LoginFormTest\DB\loginDB.mdf; Integrated Security = True; Connect Timeout = 30");
+            SqlConnection sqlcon = new SqlConnection(Constants.LoginDbConnectionString);
             //the query is a bit different this time. we're searching to see if the username already exists
             //the principle is the same though, with the dataTable
             string query = "Select * from [Table] Where username= '" + textBox1.Text + "'";
@@ -110,8 +110,7 @@ namespace LoginFormTest
                 {
                     //write the query
                     string commString = "INSERT INTO [Table](username, password) VALUES (@val1, @val2)";
-                    string constring = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Nix\Documents\Visual Studio 2015\Projects\LoginFormTest\LoginFormTest\DB\loginDB.mdf; Integrated Security = True; Connect Timeout = 30";
-
+                   
 
 
 
@@ -136,7 +135,7 @@ namespace LoginFormTest
 
 
                     //connect to db
-                    using (SqlConnection conn = new SqlConnection(constring))
+                    using (SqlConnection conn = new SqlConnection(Constants.LoginDbConnectionString))
                     {
                         //create an sqlCommand
                         //Why is this done? To sanitize inputs and prevent injection into the string..
@@ -159,13 +158,16 @@ namespace LoginFormTest
                     MessageBox.Show("Sucessfully registered!");
                     sqlcon.Close();
                 }
-                catch { MessageBox.Show("A registration error has occured. Please contact the developer :("); }
-                
+                catch (Exception ex)
+                {
+                    MessageBox.Show("A registration error has occured. Please contact the developer :(");
+                }
+
             }
-            
-            
-        }
+
 
         }
+
     }
+}
 

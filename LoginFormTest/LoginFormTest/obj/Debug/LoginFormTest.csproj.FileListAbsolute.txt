@@ -8,3 +8,16 @@ C:\Users\Nix\Documents\Visual Studio 2015\Projects\LoginFormTest\LoginFormTest\o
 C:\Users\Nix\Documents\Visual Studio 2015\Projects\LoginFormTest\LoginFormTest\obj\Debug\LoginFormTest.csproj.GenerateResource.Cache
 C:\Users\Nix\Documents\Visual Studio 2015\Projects\LoginFormTest\LoginFormTest\obj\Debug\LoginFormTest.exe
 C:\Users\Nix\Documents\Visual Studio 2015\Projects\LoginFormTest\LoginFormTest\obj\Debug\LoginFormTest.pdb
+C:\Users\smagistri\source\repos\LoginFormTest\LoginFormTest\LoginFormTest\bin\Debug\LoginFormTest.exe.config
+C:\Users\smagistri\source\repos\LoginFormTest\LoginFormTest\LoginFormTest\bin\Debug\LoginFormTest.exe
+C:\Users\smagistri\source\repos\LoginFormTest\LoginFormTest\LoginFormTest\bin\Debug\LoginFormTest.pdb
+C:\Users\smagistri\source\repos\LoginFormTest\LoginFormTest\LoginFormTest\obj\Debug\LoginFormTest.csprojAssemblyReference.cache
+C:\Users\smagistri\source\repos\LoginFormTest\LoginFormTest\LoginFormTest\obj\Debug\LoginFormTest.Form1.resources
+C:\Users\smagistri\source\repos\LoginFormTest\LoginFormTest\LoginFormTest\obj\Debug\LoginFormTest.Form2.resources
+C:\Users\smagistri\source\repos\LoginFormTest\LoginFormTest\LoginFormTest\obj\Debug\LoginFormTest.Properties.Resources.resources
+C:\Users\smagistri\source\repos\LoginFormTest\LoginFormTest\LoginFormTest\obj\Debug\LoginFormTest.csproj.GenerateResource.cache
+C:\Users\smagistri\source\repos\LoginFormTest\LoginFormTest\LoginFormTest\obj\Debug\LoginFormTest.csproj.CoreCompileInputs.cache
+C:\Users\smagistri\source\repos\LoginFormTest\LoginFormTest\LoginFormTest\obj\Debug\LoginFormTest.exe
+C:\Users\smagistri\source\repos\LoginFormTest\LoginFormTest\LoginFormTest\obj\Debug\LoginFormTest.pdb
+C:\Users\smagistri\source\repos\LoginFormTest\LoginFormTest\LoginFormTest\bin\Debug\App_Data\loginDB.mdf
+C:\Users\smagistri\source\repos\LoginFormTest\LoginFormTest\LoginFormTest\bin\Debug\App_Data\loginDB_log.ldf
